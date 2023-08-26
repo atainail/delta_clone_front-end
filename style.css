@@ -1,0 +1,1308 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat/static/Montserrat-Regular.ttf');
+  }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+.header-wrapper {          
+    display: flex;
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-width: 0.01em;
+    height: 2.8em;
+    align-items: center;
+    z-index: 3;
+}
+
+.header-content {
+    display: flex;
+    width: 100%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+}
+
+.header-wrapper, .travel-area, .travel-amenities-wrapper, .fees, .footer-wrapper {
+    background-color: rgb(17,23,43); 
+    color: white;
+}
+
+.menu {
+    position: relative;
+    left: .9em;
+    font-size: 1.6em;   
+}
+
+.delta-logo {
+    display: none;
+}
+
+.open-menu {
+    position: absolute;
+    width: 100%;    
+    height: auto;
+    background-color: rgb(17,23,43);
+    z-index: 4;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+}
+
+.open-menu-top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    padding: .6em 1.7em;
+}
+
+.open-menu-top-exit, .open-menu-top-search {
+    flex: auto;
+} 
+
+.open-menu-links-wrapper {
+    padding: 2em 3em;
+}
+
+.open-menu-top-search {
+    text-align: right;
+}
+
+.open-menu-header {
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.4em 1.2em;
+    font-size: .9em;
+    font-weight: 500;
+    letter-spacing: -1px;
+    display: flex;
+}
+
+.open-menu-header span {
+    flex: auto;
+}
+.open-menu-header .material-symbols-outlined {
+    text-align: right;
+}
+.open-menu-header-links-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.9em;
+}
+.open-menu-header-links-wrapper a {
+    padding: .9em ; 
+    font-size: .8em; 
+    font-weight: 400;   
+    color: rgba(255, 255, 255, 0.6); 
+}
+.open-menu-header-links-wrapper a:hover {
+    text-decoration: underline;
+}
+.special {   
+    font-size: .9em;     
+    font-weight: 700;
+    color: white;
+}
+.special:hover {
+    background-color: rgb(33, 41, 68);
+}
+.help {
+    font-size: .75em;
+    text-align: center;
+    padding-bottom: 4em;
+}
+
+.account-info {
+    display: inline-flex;
+    text-align: center;
+    margin: auto;
+}
+
+.header-search {
+    display: none;
+}
+
+.account-info a{
+    font-size: .85em;
+}
+
+.sign-up {
+    padding-right: .7em;
+}
+
+.log-in {
+    padding: 3px 9px;
+    background-color: red;
+    letter-spacing: -1px;
+    transition: .3s;
+}
+
+.log-in:hover {
+    background-color: rgb(138, 1, 1);
+}
+
+.alerts {
+    position: relative;
+    right: 1.1em;
+    text-align: end;
+    font-size: 1.2em;
+}
+
+.menu, .account-info, .alerts {
+    flex: auto;
+}
+
+.account-info {
+    display: inline-block;
+}
+
+.travel-area {    
+    align-items: center;
+    justify-items: center;
+    height: 14em;
+    display: block;
+    position: relative;
+    top: 4vh;
+}
+
+.booking-wrapper {
+    display: flex;    
+    padding: 3em 7em;
+    font-size: .9em; 
+}
+
+.big-booking-wrapper {
+    display: none;
+}
+
+.book, .check-in, .my-trips, .flight-status {
+    flex: auto;
+    text-align: center;
+}
+
+.flight-status {
+    display: none;
+}
+
+.travel-wrapper {
+    display: flex;
+    padding: 0 4.5em;
+    position: relative;
+}
+
+.from-arrow-to-wrapper {
+    display: flex;
+    margin: auto;
+}
+
+.from-wrapper, .to-wrapper, .travel-arrow {
+    position: relative;
+    flex: auto;
+    text-align: center;
+    justify-items: center;
+}
+
+.round-trip-wrapper, .depart-return-wrapper, .passenger-wrapper, .travel-arrow-big {
+    display: none;
+}
+
+.from, .to {
+    font-size: 1.9em;
+}
+
+.travel-arrow {   
+    margin: auto;
+    padding: 0 .5em;
+}
+
+.travel-arrow span {
+    font-size: 3.5em;
+    color: rgb(204,27,48);
+}
+
+.origin, .destination {
+    padding-top: .5em;
+    font-size: .7em;
+    white-space: nowrap;
+}
+
+.search-options-wrapper {
+    display: none;
+}
+
+.travel-down-arrow {
+    opacity: 50%;
+    text-align: center;
+}
+
+.travel-down-arrow span {
+    border: 2px solid white;
+    border-bottom: none;
+    border-top-left-radius: 100px;  /* 100px of height + 10px of border */
+    border-top-right-radius: 100px; /* 100px of height + 10px of border */
+    padding: .2em .6em;
+}
+
+.travel-picture-wrapper {
+    display: flex;
+    margin-top: -.3em;
+    width: 100%;
+    height: 35vh;
+    position: relative;
+    background-color: rgb(17,23,43); 
+}
+
+.travel-picture {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.travel-picture-wrapper img {
+    width: 100%;
+    z-index: -1;
+    opacity: 50%;
+}
+
+.travel-picture-text {
+    position: absolute;
+    top: 10vh;
+    margin: auto;
+    width: 100%;
+}
+
+
+.travel-picture a:hover {
+    text-decoration: underline;
+}
+
+.travel-picture-text-header, .travel-picture-text-desc {
+    margin-bottom: 1.2em;
+    /* text-shadow: 2px 2px black; */
+}
+
+.travel-picture-text-desc {
+    padding: 0 4em;
+    font-size: .9em;
+}
+
+.travel-amenities-wrapper {
+    color: black;
+    height: 14vh;
+    
+}
+
+.amenities {
+    display: flex;   
+}
+
+.travel-amenity {
+    color: white;
+    opacity: .5;
+    margin-bottom: .8em;
+}
+
+.vacations, .hotels, .cars, .gift-cards, .delta-amex {
+    flex: auto;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.4em .7em;
+    text-align: center;
+    font-size: .7em;
+}
+
+.vacations-big, .delta-amex-big, .hotels-big, .cars-big, .gift-cards-big, .fees-big {
+    display: none;
+}
+
+.delta-amex {
+    display: none;
+}
+
+.gift-cards {
+    border-right: none;
+}
+
+.travel-picture-button button {
+    background-color: rgb(229,25,55);
+    padding: .8em .9em;
+    border: none;
+    color: white;
+    font-weight: 900;
+    transition: .3s;
+}
+
+.travel-picture-button button:hover {
+    background-color: rgb(138, 1, 1);
+    cursor: pointer;
+}
+
+.fees {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 5em;
+    font-size: .8em;
+}
+
+.fees p {
+    flex: auto;
+}
+
+.fees p span.material-symbols-outlined {
+    font-size: 1.1em;
+    margin-left: 1.5em;
+}
+
+
+.all-content-wrapper {
+    position: relative;
+    top: 53.5vh;   
+}
+
+.all-content-wrapper a{
+    font-weight: 300;
+}
+
+.block-one, .block-two, .all-content-wrapper, .all-content-wrapper a {
+    color: rgb(17,23,43);
+}
+
+.block-one {
+    font-size: .9em;
+    padding-top: 3em;
+    padding-bottom: 1.2em;
+    font-weight: 900;
+    text-align: center;
+}
+
+.block-two {
+    font-size: 2.5em;
+    text-align: center;
+    padding: 0 2.2em;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 3em;
+    color: rgb(9,31,101);
+}
+
+.picture {
+    text-align: center;
+    height: 30vh; 
+}
+
+.picture span {
+    width: 50vw;
+    font-size: 10em;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.desc-wrapper {
+    display: flex;
+    background-color: rgb(246,246,247);
+    /* height: 32vh; */
+    height: auto;
+    padding: 1.3em 1.1em;
+}
+
+.desc {
+    padding: 0 1.5em;
+}
+
+.desc-header {
+    font-weight: 900;
+    font-size: .90em;
+    padding-bottom: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+    letter-spacing: -1px;
+    /* padding: 0 1.5em; */
+    /* color: rgb(9,31,101); */
+}
+
+.desc-header-line {
+    width: 20vw;
+    height: 2px;
+    display: block;
+    background-color: aliceblue; 
+    border-top: 4px solid red;  
+    margin-top: -1em;
+}
+
+.innertext {
+    line-height: 2em;
+    font-size: .95em;
+}
+
+.content-arrow {
+    margin: auto;
+    color: red;
+}
+
+.content-arrow-big {
+    display: none;
+}
+
+.footer-wrapper {
+    position: relative;
+    top: 52vh;
+    color: white;
+    padding: 1.5em 5em;
+    display: block;
+}
+
+.footer-search-wrapper {
+    position: relative;
+    padding-bottom: 3em;
+    font-size: 1.5em;  
+}
+
+.all-footer-links-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+}
+
+.footer-search {
+    position: relative;
+    top: 2vh; 
+}
+
+.footer-search-wrapper a {
+    font-weight: 400;
+    flex: auto; 
+}
+
+.footer-search-icon {
+    float: right;
+    font-size: 1.1em;   
+}
+
+.popular-searches {
+    display: none;
+}
+
+.footer-title-wrapper {
+    display: block;
+    padding: 1.2em 0;
+    height: auto;
+}
+
+.footer-title, .footer-arrow {
+    flex: auto;
+}
+
+.footer-title {
+    display: flex;
+    opacity: 50%;
+    font-size: .8em;
+    letter-spacing: .1em;
+    margin: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.footer-arrow {
+    text-align: right;
+    margin: auto;
+    padding-bottom: 1.3em;
+}
+
+.footer-arrow a {
+    font-weight: 400;
+}
+
+.footer-links {
+    padding-top: 1.1em;
+    
+}
+
+.footer-links a{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a {
+    padding: .7em 0;
+    font-weight: 400;
+    font-size: .8em;
+    flex: auto;
+}
+
+.about, .customer-service, .site-support, .policies {
+    display: none;
+}
+
+.copyright-info {
+    font-size: .7em;
+    text-align: center;
+    padding: 3em 0;
+    line-height: 1.8em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.copyright-info-text {
+    padding-top: .5em;
+    margin: auto;
+    width: 75%;
+}
+
+.copyright-info a {
+    font-weight: 300;   
+}
+
+.copyright-info a:hover {
+   text-decoration: underline; 
+}
+
+.socials {
+    width: 100%;
+    display: flex;
+    font-size: 1.4em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+.twitter, .facebook {
+    flex: auto;
+    position: relative;
+}
+
+.facebook {
+    text-align: right;
+}
+
+.facebook i{
+    font-size: 1.8em;
+}
+
+.twitter {
+    margin: auto;  
+    text-align: left;
+    padding-left: .9em;
+}
+
+.twitter:hover {
+    cursor: pointer;
+}
+
+.twitter i{
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+    padding: .5em;
+}
+
+.language {
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    margin: auto;
+    margin-bottom: 7em;
+    font-size: .9em;
+}
+
+.language a {
+    font-weight: 500;
+}
+
+.eng, .esp {
+    flex: auto;
+    margin: auto;
+    text-align: center;
+    padding: 1.2em 0;   
+}
+
+.eng {
+    border-right: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+.eng i {
+    font-size: 1.6em;
+    padding-right: .1em;
+}
+
+.feedback {
+    background-color: rgb(0,51,102);
+    position: fixed;
+    top: 40vh;
+    right: 0;
+    width: 3em;
+    font-size: .7em;
+    writing-mode: vertical-rl;
+    z-index: 6; 
+}
+
+.feedback a {
+    font-weight: 400;  
+    padding: .8em 0; 
+    width: 100%;
+    display: flex;
+    margin: auto;
+    transform: rotate(180deg);
+}
+
+.feedback-icon, .feedback-text {
+    flex: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.feedback-icon {
+    padding: .2em 0 .3em 0;
+}
+
+.feedback-text {
+    font-size: 1.1em;  
+}
+
+@media (min-width: 768px) {
+    
+    /* Header Stuff Starts Here///////////////////////////////////////////////// */
+    .header-wrapper{
+        display: inline-flex;
+    }
+    .account-info {
+        text-align: right;
+        margin-left: 28em;
+    }
+
+    /* Travel Area Stuff Starts Here /////////////////////////////////////////// */
+    .flight-status {
+        display: block;
+    }
+
+    .from-wrapper, .to-wrapper {
+        padding: 0 2em;
+    }
+
+    .travel-picture-wrapper img {
+        object-fit: cover;
+    }
+    
+    .travel-picture-text {
+        width: 60%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        margin-left: 8vw;
+    }
+
+    .travel-picture-text-header, .travel-picture-text-desc, .travel-picture-button button  {  
+        padding: 0;
+        height: auto;
+        flex: auto;
+        margin: 0 0 .9em 0;
+    }  
+
+    .travel-picture-text-header {
+        font-size: 1.4em;
+        font-weight: 900;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .travel-picture-text-desc {
+        font-size: .95em; 
+    }
+
+    .travel-picture-button button {
+        padding: .8em .9em;
+    }
+
+    .travel-amenities-wrapper {
+        display: flex;
+    }
+    .travel-amenity {
+        color: white;
+        opacity: .5;
+        margin-bottom: .3em;
+    }
+    .amenities {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        flex: auto;
+        height: 100%;
+    }
+    .vacations, .hotels, .cars, .gift-cards, .delta-amex {
+        border: none;
+        margin: auto;  
+    }
+    .delta-amex {
+        display: block;
+    }
+    .fees {
+        margin: auto;
+        padding: 0 2em;
+    }
+
+    .fees span {
+        display: none;
+    }
+
+    /* Content stuff starts here /////////////////////////////////////////////// */
+    .desc-wrapper {
+        height: auto;
+        padding-bottom: 5em;
+    }
+    .desc-header-line {
+        width: 10vw;
+    }
+    .picture {
+        text-align: center;
+        height: 40vh;
+    }
+    .picture span {
+        font-size: 18em;
+        margin-bottom: 1.5em;    
+    }
+
+    /* Footer stuff starts here ////////////////////////////////////////////////*/
+    .footer-wrapper {
+        padding: 1.5em 3em;
+    }
+
+    .footer-search-wrapper {
+        font-size: 3em;  
+        text-align: center;
+    }
+
+    .footer-search-icon {
+        font-size: .8em;  
+        float: none;
+    }
+    .popular-searches {
+        position: relative;
+        top: 5vh;
+        width: 100%;
+        display: inline-flex;
+        font-size: .35em;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 4.5em;
+    }
+    .pop {
+        color: rgba(255, 255, 255, 0.4);
+    }
+    .popular-searches span {
+        flex: auto;
+    }
+    .popular-searches a:hover {
+        text-decoration: underline;
+    }  
+    .all-footer-links-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex: auto;
+        margin: auto;
+        height: 20em;
+        
+    }
+
+    .footer-title-wrapper {
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        
+    }
+    
+    .footer-title{
+        border: none;
+        flex: auto;
+    }
+    .footer-arrow {
+        display: none;
+    }
+    .footer-links {
+        padding-top: 1.8em;
+    }
+    .footer-links a{
+        font-weight: 700;
+    }
+    .about, .customer-service, .site-support, .policies {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        /* flex: auto; */
+        display: block;
+        flex-direction: column;
+        border: none;
+        /* margin-right: 2.5em; */
+        
+    }  
+    .policies {
+        padding-right: 0;
+    }
+
+    /* Very Bottom of the page /////////////////////////////////////// */
+
+    .very-bottom {
+        display: flex;
+        width: 100%;
+        margin: auto;
+    }
+
+    .socials {
+        height: 2vh;
+        width: 25vw;
+    }
+
+    .twitter {
+        padding-top: .6em;
+    }
+
+    .language {
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
+
+
+@media (min-width: 992px) {
+    /* Header stuff starts here///////////////////////////////////////// */
+    .header-wrapper {
+        width: 88vw;
+        padding: 1.2em 6vw;    
+    }
+
+    .header-content {
+        display: flex;
+        width: 100%;
+        margin: auto;
+        white-space: nowrap;
+        /* forces all elements to stay on the same line no matter window size*/       
+        max-width: 1200px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .delta-logo, .big-booking-wrapper, .account-info, .alerts, .header-search {
+        position: relative;
+        flex: auto;
+        margin: auto;
+    }
+
+    .delta-logo {      
+        display: flex;
+        flex: auto;
+        max-width: 150px;
+        letter-spacing: 5px;
+        font-weight: 900;
+        font-size: 1.5em;     
+    }
+    .account-info, .sign-up{
+        margin: auto;
+        text-align: right;
+        flex: auto;
+    }
+
+    .big-link-hover{
+        margin: auto;
+        flex: auto;
+        font-size: .8em;
+    }
+
+    .alerts {
+        right: 0;
+        padding-right: .5em;
+        font-size: 1.5em;
+        max-width: 40px;
+    }
+    .header-search {
+        display: flex ;
+        flex: auto;
+        font-size: 1.5em;
+        padding: .2em  0 .2em .7em;
+        border-left: 1px solid rgba(255, 255, 255, 0.2); 
+    }
+
+    /* Travel area starts here ///////////////////////////////////////////////*/
+    .booking-wrapper{
+        display: none ;
+    }
+
+    .big-booking-wrapper {
+        display: inline-flex; 
+        flex: auto;
+    }
+
+    .big-booking-wrapper a {
+        margin: 0 .5em;
+        font-size: .9em;
+    }
+
+    /* Travel area starts here /////////////////////////////////////////*/
+    .travel-area {
+        /* display: block; */
+        position: relative;
+        padding-top: 3em;
+        margin: auto;
+        white-space: nowrap; 
+        
+    }
+
+    .travel-wrapper {
+        height: 10vh;
+        display: flex;
+        padding-top: 3vh;
+        max-width: 1000px;
+        margin: auto;
+        
+    }
+
+    .travel-down-arrow {
+        display: none;
+    }
+
+    .from-wrapper, .to-wrapper{
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 0 .8em;
+        margin: auto;
+    }
+
+    .travel-arrow{
+        display: block;
+        padding: 0 .6em;    
+    }
+
+    .round-trip-wrapper, .depart-return-wrapper, .passenger-wrapper{
+        display: flex;
+        flex: auto;
+        margin: auto;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        padding-bottom: .5em;
+        padding-right: .6em;
+        margin-right: 1.3em;
+        position: relative;  
+    }
+
+    .round-trip-down-arrow, .depart-return-cal, .passenger-down-arrow {
+        position: absolute;
+        right: 0;
+        margin: auto;
+    }
+
+    .depart-return-cal {
+        opacity: 30%;
+        margin-top: -.3em;
+    }
+    
+
+    .round-trip-down-arrow, .passenger-down-arrow, .bi-dash-lg {   
+        color: red;
+    }
+    
+
+    .travel-arrow-big {
+        display: block;
+        margin: auto;
+    }
+
+    .travel-arrow-big i {
+        background-color: red;
+        border-radius: 100%;
+        padding: .4em;
+        font-size: 1.5em;
+    }
+
+    .search-options-wrapper {  
+        display: flex;
+        width: 70%;
+        margin: auto;
+        padding: 2em 0;
+        background-color: rgb(17,23,43); 
+        max-width: 900px;      
+    }
+
+    /* Hide the browser’s default checkbox */
+    input {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+      /* Create a custom checkbox */
+    label {
+        position: relative;
+        display: block;
+        padding-left: 30px;
+        
+    }
+    label:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+        left: 0;
+        display: block;
+        height: 20px;
+        width: 20px;
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* On mouse-over, add a darkly on 10% background color */
+    label:hover:before {
+        background-color: transparent;
+    }
+
+    /* Style the checkmark/indicator */
+    label:after {
+        content: '';
+        position: absolute;
+        left: 7px;
+        top: 1px;
+        width: 5px;
+        height: 10px;
+        border: solid #333;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+        opacity: 0;
+        
+    }
+
+    /* Show or hide the checkmark when checked */
+    input:checked + label:after {
+        opacity: 1;
+    }
+
+    .search-options, .miles, .fares, .flexible, .adv-search {
+        font-size: .8em;
+        flex: auto;
+        margin: auto;
+        margin-right: 1.8em;
+    }
+
+    .search-options, .miles i, .fares i {
+        opacity: 30%; 
+    }
+
+    .miles i, .fares i {
+        font-size: 1.3em;
+        margin: auto;
+        margin-left: .1em;
+    }
+    .adv-search {
+        text-align: right;
+    }
+    .adv-search i {
+        font-size: .1em;
+        padding-left: .8em;
+    }
+
+    .travel-picture-wrapper {
+        display: flex;
+        margin-top: -.3em;
+        width: 100%;
+        height: 60vh;
+        background-color: rgb(17,23,43);  
+    }
+    .travel-picture-text-desc {
+        width: 80%;
+        white-space: normal;
+
+    }
+
+    .full-width-amenities {
+        width: 100%;
+        background-color: rgb(17,23,43);
+    }
+
+    .travel-amenities-wrapper, .amenities, .amenities a, .amenities span, .fees-big p {
+        margin: auto;
+    }
+
+    .travel-amenities-wrapper {
+        height: 10vh;
+        width: 80%;
+        max-width: 1100px;
+    }
+
+    .amenities a {
+        padding: 0 .9em;
+    }
+     
+
+    .amenities span, .fees-big span{
+        color: rgba(255, 255, 255, 0.2);   
+    }
+
+    .amenities span :nth-child(3n), .fees-big span {
+        font-size: 1.4em;
+    }
+
+    .vacations, .delta-amex, .hotels, .cars, .gift-cards, .fees {
+        display: none;
+    }
+
+    .vacations-big, .delta-amex-big, .hotels-big, .cars-big, .gift-cards-big, .fees-big {
+        display: flex;
+        margin: auto;
+        font-size: .65em;
+    }
+
+    .fees-big {
+        display: flex;
+        font-size: .7em;
+        padding-left: 1.2em;
+    }
+
+    .fees-big p {
+        flex: auto;
+    }
+
+    
+    .fees-big p span.material-symbols-outlined {
+        font-size: 1.1em;
+        margin-left: 1.5em;
+    }
+
+    /* Content stuff starts here /////////////////////////////////////////////*/
+    
+    .all-content-wrapper {
+        top: 75vh;   
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .block-two {
+        margin: auto;
+        width: 76%;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: row;
+        height: 14em;
+        margin: auto;
+    }
+
+    .picture {
+        margin: auto;
+        text-align: left;
+        height: 100%;
+        font-size: .5em;
+        width: 40em;
+        /* margin: 3em; */
+        flex: auto;
+    }
+
+    .picture span {
+        text-align: center;
+        height: 100%;
+        width: 100%;    
+    }
+
+    .picture img {
+        margin: auto;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .content-arrow {
+        display: none;
+    }
+
+    .content-arrow-big {
+        display: block;
+        width: auto;
+        height: 100%;
+        margin: auto;
+        color: red;
+        background-color: rgb(246,246,247);
+    }
+
+    .content-arrow-big span{
+        position: relative;
+        top: 50%;
+    }
+
+    .no-red-line-header {
+        width: 90%;
+        display: flex;
+        margin: auto;
+        flex-direction: row;
+    }
+
+    .no-red-line-header .content-wrapper  {
+        flex-direction: column;
+        flex: auto;
+        padding: 0;
+        margin: auto;
+        /* margin-bottom: 2em; */
+        margin-right: 2em;
+        width: 30em;
+        height: 35em;
+    }
+
+    
+
+    .no-red-line-header .content-wrapper .desc-wrapper .desc, 
+    .no-red-line-header .content-wrapper .desc-wrapper .innertext {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+
+    .no-red-line-header .content-wrapper:nth-child(3n){
+        margin-right: 0;
+    }
+
+    .no-red-line-header .content-wrapper .picture {
+        /* flex: auto; */
+        margin: auto;
+        width: 100%;
+        height: 100%;
+    }
+   
+    .no-red-line-header .content-wrapper .desc-wrapper {
+        flex: auto;
+        height: 100%;
+
+    }
+
+    /* Footer stuff starts here////////////////////////////////////////////////// */
+
+    .footer-wrapper {
+        top: 80vh;
+        margin: auto;   
+    }
+
+    .footer-search-wrapper {
+        margin: auto;
+    }
+
+    .footer-search-wrapper, .all-footer-links-wrapper {
+        margin: auto;
+        max-width: 900px;
+    }
+
+    .very-bottom {
+        width: 90%;
+        max-width: 600px;
+    }
+
+    
+}
